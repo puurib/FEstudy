@@ -1,0 +1,30 @@
+@import "./sub","./sub2";
+
+$color : royalblue;
+
+.container {
+  h1 {
+    color: $color;
+  }
+}
+.box {
+  $color: royalblue;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: $color;
+  
+  &:hover {
+    /* saturate <-채도-> desaturate */
+    /* grayscale 회색으로 만들기 */
+    /* invert 보색으로 만들기 */
+    /* rgba($color, .5) <-- 투명도 */
+    /* darken 어둡게, lighten 밝게 */
+    background-color: darken($color, 10%);
+  }
+  &.built-in {
+    /* mix 색상 섞기 */
+    background-color: mix($color, yellow);
+  }
+}

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+  /* 글씨체 */
+  font-family: 'Poppins', sans-serif;
+
+  /* margin, padding을 안하면 기본 브라우저의 css가 장착되니까,, 0을 주어 지워줌*/
+  margin: 0;
+  padding: 0;
+
+  /* */
+  box-sizing: border-box;
+}
+
+body {
+  background: #E3F2FD;
+}
+
+.select-menu {
+  width: 380px;
+  /* div 안에 span 태그의 height는 자동 세팅*/
+  margin: 150px auto;
+}
+
+.select-menu .select-btn {
+  display: flex;
+  height: 55px;
+  background: #fff;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400px;
+
+  border-radius: 8px;
+  align-items: center;
+
+  
+
+  /*마우스 올리면 커서가 pointer로*/
+  cursor: pointer;
+
+  justify-content: space-between;
+
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.select-menu .select-btn i{
+  font-size: 25px;
+  transition: 0.3s;
+}
+
+.select-menu .options {
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  display: none;
+}
+
+/* toggle시 */
+.select-menu.active .options {
+  display: block;
+}
+
+.select-menu.active .select-btn i{
+  transform: rotate(-180deg);
+  
+}
+
+.options .option {
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  padding: 0 16px;
+  border-radius: 8px;
+  align-items: center;
+  background: #fff;
+}
+
+/* 가상선택자 hover */
+.options .option:hover {
+  background: #f2f2f2;
+}
+
+.option i {
+  font-size: 25px;
+  margin-right: 12px;
+}
+
+.option .option-text {
+  font-size: 18px;
+  color: #333;
+}

@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'ParkYongJun';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/ParkYongJun.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ParkYongJun;
+  /* 스크롤 */
+  scroll-behavior: smooth;
+}
+
+/* nav - 블럭 태그*/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background-color: rgba(181, 147, 212, 0.7);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+
+  .navbar {
+    display: flex;
+    align-items : center; /*하나하나 움직임*/
+    justify-content: space-between;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    .logo{
+      a{
+        color: #fff;
+        font-size: 27px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+    .menu {
+      display: flex;
+      li {
+        list-style: none;
+        margin : 0 15px;
+
+        a {
+          color: #fff;
+          font-size: 17px;
+          font-weight: 500;
+          text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:rgb(181, 147, 212);
+  font-size: 70px;
+}
+
+#Home {
+  background-color: #fff;
+}
+
+#About {
+  background-color: rgb(77, 77, 78);
+}
+
+#Category {
+  background-color: #fff;
+}
+
+#Contact {
+  background-color: rgb(77, 77, 78);
+}
+
+#Feedback {
+  background-color: #fff;
+}
+
+.button {
+  a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    background-color: #6667ab;
+    padding : 7px 12px;
+    border-radius: 6px;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.25);
+  }
+}
+

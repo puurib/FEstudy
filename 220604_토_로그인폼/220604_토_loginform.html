@@ -1,0 +1,181 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title> 220604 loginform </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans:600|Work+Sans:400,500,600,700&display=swap');
+      @font-face {
+        font-family: 'LAB디지털';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'ParkYongJun';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/ParkYongJun.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+      body{
+        background: rgb(34,193,195);
+        /* 그라데이션 주기 */
+        background: linear-gradient(135deg, rgb(64, 225, 228) 0%,     rgb(208, 224, 114) 100%);
+        font-family: 'ParkYongJun';
+      }
+
+      html{
+        font-size: 100%;
+      }
+      
+      #loginform{
+        min-width: 300px;
+        min-height: 400px;
+        
+        max-width: 500px;
+        max-height: 400px;
+
+        width: 30%;
+        height: 60%;
+        margin: 100px auto;
+        background-color: #FFFFFF;
+        border-radius: 25px;
+      }
+
+      #headerTitle{
+        text-align: center;
+        font-family: 'ParkYongJun', sans-serif;
+        padding: 2rem 0;
+        margin: 0;
+        font-size: 2rem;
+      }
+
+      #footer {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-family: 'ParkYongJun', sans-serif;
+        padding: 5rem 0;
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      #footerTitle{
+        position: sticky;
+        bottom:0;
+      }
+
+
+      .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+        max-width: 100%;
+        position: relative;
+      }
+
+      .row input{
+        font-family: 'ParkYongJun';
+        color:rgb(64, 225, 228);
+        width: 80%;
+        box-sizing: border-box;
+        border: none;
+        font-size: 1.2rem;
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+        box-shadow: inset 0px -3px 0px 0px rgba(187,187,187,0.2);
+        transition: box-shadow 0.2s ease-in;
+      }
+
+      .row input:focus{
+        box-shadow: inset 0px -3px 0px 0px rgba(34,193,195,0.7);
+        outline: none;
+      }
+
+      /* 브라우저 상에서 placeholder 색이 변경되어 보이도록 */
+      .row input::-webkit-input-placeholder {color: rgba(53, 53, 53, 0.2);}
+
+      .row label{
+        font-family: 'ParkYongJun';
+        align-self: start;
+        padding-left: 4.5rem;
+        padding-bottom: 0.5rem;
+        color: rgba(8, 8, 8, 0.9);
+      }
+
+      .row button{
+        font-family: 'ParkYongJun';
+        border-radius: 25px;
+        width: 80%;
+        height: 40px;
+        font-size: 1.3rem;
+        color: white;
+        font-weight: 700;
+        background: rgb(34,193,195);
+        background: linear-gradient(90deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
+        border: 0px;
+        cursor: pointer;
+        transition: opacity 0.25s ease-out;
+      }
+
+      .row button:hover{
+        opacity: 0.8;
+      }
+
+      #button{
+        padding-bottom: 1.5rem;
+      }
+    </style>
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
+
+  <body translate="no">
+    <div id="container">
+      <div id="loginform">
+        <h2 id="headerTitle">
+          Login Form
+        </h2>
+      
+        <!--Username & Password -->
+        <div>
+          <!--Username-->
+          <div class="row">
+            <label>Username</label>
+            <input type="text" placeholder="Enter your username">
+          </div>
+
+          <!--Password-->
+          <div class="row">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password">
+          </div>
+          
+          <!--Login 버튼-->
+          <div id="button" class="row">
+            <button>
+              Login
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="footerTitle">
+        <h6>
+          220604 토 스터디 과제
+        </h6>
+      </div>
+    </div>
+  </body>
+</html>
